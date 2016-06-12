@@ -8,3 +8,8 @@ RUN pacman -U --noconfirm http://mirror.pritunl.com/archlinux/all/scala-$SCALA_V
 RUN pacman -U --noconfirm http://mirror.pritunl.com/archlinux/all/sbt-1:$SBT_VERSION
 
 RUN sbt
+
+RUN mkdir /app
+WORKDIR /app
+
+CMD sbt
